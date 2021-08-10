@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@afiniti/webgl-slider": "^0.0.4",
+    "@glidejs/glide": "^3.4.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "gsap": "^3.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-gsap": "^3.2.1",
+    "react-player": "^2.9.0",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
+    "swiper": "^6.8.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -34,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "sass": "^1.37.5"
   }
 }
