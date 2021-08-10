@@ -1,6 +1,7 @@
 {
   "name": "web-react",
   "version": "0.1.0",
+  "homepage": "http://zul-adn.github.io/gusto-web",
   "private": true,
   "dependencies": {
     "@afiniti/webgl-slider": "^0.0.4",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
