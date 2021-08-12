@@ -1,9 +1,11 @@
 import React from 'react';
 
-import './css/glide.core.min.css';
+// import './css/glide.core.min.css';
 import './css/main.css';
+import './css/tes.css';
 
 import Slider from "react-slick";
+
 
 
 const App = () => {
@@ -56,7 +58,7 @@ const App = () => {
               <h4>BALI</h4>
               <h4>THAILAND</h4> */}
             </div>
-            <div id="description">
+            {/* <div id="description">
               <p>
                 As the larget archipelagic country in the world, Indonesia is
                 blessed with so many different people, cultures, customs,
@@ -87,7 +89,7 @@ const App = () => {
                 and the iconic temples of Wat Arun, Wat Pho and the Emerald
                 Buddha Temple (Wat Phra Kaew).
               </p>
-            </div>
+            </div> */}
             {/* <div className="btn">
               <p>Explore</p>
               <i className="fa fa-arrow-right"></i>
@@ -95,32 +97,46 @@ const App = () => {
           </div>
         </div>
         <div>
-          {/* <div className="glide">
-            <Slider {...settings}>
+
+            <div class="container">
+              <div class="carousel">
+                <div class="item a"><img src="https://i.pinimg.com/originals/bb/89/ee/bb89ee0b2434ec247081cc1458abba83.gif" /></div>
+                <div class="item b"><img src="https://uploads.toptal.io/blog/image/124464/toptal-blog-image-1508845777150-847ff1a13b29d4b832694404acb67f7a.gif" /></div>
+                <div class="item c"><img src="https://static.wixstatic.com/media/ade75f_75a585aa1797487ca840645e0784988f~mv2.gif" /></div>
+                <div class="item d"><img src="https://norwegianscitechnews.com/wp-content/uploads/2019/11/vr.gif" /></div>
+                <div class="item e"><img src="https://i.gifer.com/GgWw.gif" /></div>
+                <div class="item f"><img src="https://images.prismic.io/love-website-2020/8bfd9ebb-1980-4404-b1d2-310288df5806_gif6.gif" /></div>
+              </div>
+            </div>
+
+          {/* <div className="glide"> */}
+          {/* <Slider {...settings}>
               <div>
-                <div className="slider-image">
+                <div >
                   <img src="https://i.pinimg.com/originals/bb/89/ee/bb89ee0b2434ec247081cc1458abba83.gif" />
                 </div>
               </div>
               <div>
-                <h3>2</h3>
+                <div>
+                  <img src="https://uploads.toptal.io/blog/image/124464/toptal-blog-image-1508845777150-847ff1a13b29d4b832694404acb67f7a.gif" />
+                </div>
               </div>
               <div>
-                <h3>3</h3>
+                <div >
+                  <img src="https://i.pinimg.com/originals/bb/89/ee/bb89ee0b2434ec247081cc1458abba83.gif" />
+                </div>
               </div>
               <div>
-                <h3>4</h3>
+                <div >
+                  <img src="https://i.pinimg.com/originals/bb/89/ee/bb89ee0b2434ec247081cc1458abba83.gif" />
+                </div>
               </div>
               <div>
-                <h3>5</h3>
               </div>
-              <div>
-                <h3>6</h3>
-              </div>
-            </Slider>
-          </div> */}
+            </Slider> */}
+          {/* </div> */}
 
-          <div className="glide">
+          {/* <div className="glide">
             <div className="glide_cover"></div>
             <div className="glide__track" data-glide-el="track">
               <ul className="glide__slides">
@@ -163,12 +179,27 @@ const App = () => {
                 <i className="fa fa-arrow-right"></i>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
       <div className="background"></div>
     </section>
+    // <div>
+    //   <h2>Center Mode</h2>
+    //   <div className="container">
+    //     {/* <div className="carousel"> */}
+    //       <Slider {...settings}>
+    //         <div class="item a">a</div>
+    //         <div class="item b">b</div>
+    //         <div class="item c ">c</div>
+    //         <div class="item d">d</div>
+    //         <div class="item e ">E</div>
+    //         <div class="item f">F</div>
+    //       </Slider>
+    //     {/* </div> */}
+    //   </div>
+    // </div>
   );
 };
 

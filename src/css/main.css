@@ -308,12 +308,15 @@ nav ul li {
   }
   .text-wrapper {
     width: 40vw;
+
   }
   .glide {
     width: 50vw;
   }
   .text {
+    position: absolute;
     padding-left: 10%;
+    z-index: 999;
   }
   .text h4 {
     transform: scale(0.5);
