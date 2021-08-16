@@ -77,7 +77,7 @@ export default function App() {
           <OrbitControls
             enableZoom={false}
             minPolarAngle={Math.PI/2}
-            maxPolarAngle={Math.PI/1.95}
+            maxPolarAngle={Math.PI/2}
            
           />
         </Suspense>
