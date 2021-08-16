@@ -18,7 +18,7 @@ function Cylinder() {
       position={[0, 0, 0]}
       rotation={[0, 0, 0]}
     >
-      <cylinderBufferGeometry attach="geometry" args={[3, 3, 2, 100]} />
+      <cylinderBufferGeometry attach="geometry" args={[3.5, 3.5, 2, 100]} />
       <meshBasicMaterial
         displacementScale={0.2}
         map={colorMap}
@@ -61,19 +61,25 @@ export default function App() {
           </div>
         </nav>
       </div>
-  
+
       <Canvas
         pixelRatio={window.devicePixelRatio}
         camera={{
-          position: [3, 0, 3.8]
+          position: [3, 0, 4.2]
         }}
         style={{ position: "absolute" }}
-        >
+      >
         <Suspense fallback={null}>
           <Physics>
             <Cylinder />
+          
           </Physics>
-          <OrbitControls />
+          <OrbitControls
+            enableZoom={false}
+            minPolarAngle={Math.PI/2}
+            maxPolarAngle={Math.PI/1.95}
+           
+          />
         </Suspense>
       </Canvas>
 
