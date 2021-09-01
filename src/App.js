@@ -33,11 +33,11 @@ export default function App() {
         alt="A 3D model of an astronaut"
         ar
         ar-modes="webxr scene-viewer quick-look"
-        environment-image="neutral"
+        // environment-image="neutral"
         max-field-of-view="-160deg"
-        min-field-of-view="4.5deg"
-        max-camera-orbit="Infinity 91deg auto"
-        min-camera-orbit="-Infinity 89deg auto"
+        min-field-of-view="6deg"
+        max-camera-orbit="Infinity 89deg auto"
+        min-camera-orbit="-Infinity 85deg auto"
         camera-controls>
       </model-viewer>
 
