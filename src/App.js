@@ -8,41 +8,6 @@ import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import "./css/styles.css";
 import "./css/styles2.css";
 
-function Cylinder() {
-  const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useLoader(TextureLoader, [
-    'https://i.gifer.com/ycY.gif',
-    'https://37.media.tumblr.com/f174f6ccfa4ed07692ab38c7a31d5864/tumblr_n69cl3N9Sv1roeqdqo1_500.gif'
-  ])
-  return (
-    <mesh
-      position={[0, 0, 0]}
-      rotation={[0, 0, 0]}
-    >
-      <cylinderBufferGeometry attach="geometry" args={[3.5, 3.5, 2, 100]} />
-      <meshBasicMaterial
-        displacementScale={0.2}
-        map={colorMap}
-        displacementMap={displacementMap}
-        normalMap={normalMap}
-        roughnessMap={roughnessMap}
-        aoMap={aoMap}
-      />
-    </mesh>
-  );
-}
-
-function Plane() {
-  const [ref] = usePlane(() => ({
-    rotation: [-Math.PI / 2, 0, 0],
-  }));
-  return (
-    <mesh ref={ref} rotation={[-Math.PI / 2, 0, 0]}>
-      <planeBufferGeometry attach="geometry" args={[100, 100]} />
-      <meshLambertMaterial attach="material" color="lightblue" />
-    </mesh>
-  );
-}
-
 export default function App() {
   return (
     <>
@@ -62,26 +27,19 @@ export default function App() {
         </nav>
       </div>
 
-      <Canvas
-        pixelRatio={window.devicePixelRatio}
-        camera={{
-          position: [3, 0, 4.2]
-        }}
-        style={{ position: "absolute" }}
-      >
-        <Suspense fallback={null}>
-          <Physics>
-            <Cylinder />
-          
-          </Physics>
-          <OrbitControls
-            enableZoom={false}
-            minPolarAngle={Math.PI/2}
-            maxPolarAngle={Math.PI/2}
-           
-          />
-        </Suspense>
-      </Canvas>
+      <model-viewer
+        style={{ height: '100vh', width: '100vw' }}
+        src="https://dinartech.com/ar/cylinder.glb"
+        alt="A 3D model of an astronaut"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        environment-image="neutral"
+        max-field-of-view="-160deg"
+        min-field-of-view="4.5deg"
+        max-camera-orbit="Infinity 91deg auto"
+        min-camera-orbit="-Infinity 89deg auto"
+        camera-controls>
+      </model-viewer>
 
       <div class="footer-wrapper">
         <div class="footer">
