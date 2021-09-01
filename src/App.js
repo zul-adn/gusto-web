@@ -35,7 +35,7 @@ export default function App() {
         ar-modes="webxr scene-viewer quick-look"
         // environment-image="neutral"
         max-field-of-view="-160deg"
-        min-field-of-view="6deg"
+        min-field-of-view="5deg"
         max-camera-orbit="Infinity 89deg auto"
         min-camera-orbit="-Infinity 85deg auto"
         camera-controls>
