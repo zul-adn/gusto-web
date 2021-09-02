@@ -3,7 +3,9 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { Physics, usePlane, useBox } from "@react-three/cannon";
 
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
+import { TextureLoader } from 'three/src/loaders/TextureLoader';
+
+import Cyn from './3d/cylinder.glb';
 
 import "./css/styles.css";
 import "./css/styles2.css";
@@ -29,7 +31,8 @@ export default function App() {
 
       <model-viewer
         style={{ height: '100vh', width: '100vw' }}
-        src="https://dinartech.com/ar/cylinder.glb"
+        // src="https://dinartech.com/ar/cylinder.glb"
+        src={Cyn}
         alt="A 3D model of an astronaut"
         ar
         ar-modes="webxr scene-viewer quick-look"
@@ -39,6 +42,7 @@ export default function App() {
         max-camera-orbit="Infinity 89deg auto"
         min-camera-orbit="-Infinity 85deg auto"
         orbit-sensitivity="0.4"
+        disable-zoom
         camera-controls>
       </model-viewer>
 
