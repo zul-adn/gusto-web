@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/gusto-web/static/css/main.5077186d.chunk.css",
-    "main.js": "/gusto-web/static/js/main.b5909f8d.chunk.js",
-    "main.js.map": "/gusto-web/static/js/main.b5909f8d.chunk.js.map",
+    "main.css": "/gusto-web/static/css/main.4376adac.chunk.css",
+    "main.js": "/gusto-web/static/js/main.1b78a9ea.chunk.js",
+    "main.js.map": "/gusto-web/static/js/main.1b78a9ea.chunk.js.map",
     "runtime-main.js": "/gusto-web/static/js/runtime-main.c3f5f08d.js",
     "runtime-main.js.map": "/gusto-web/static/js/runtime-main.c3f5f08d.js.map",
     "static/js/2.fb1a1d57.chunk.js": "/gusto-web/static/js/2.fb1a1d57.chunk.js",
@@ -10,13 +10,14 @@
     "static/js/3.8324dcb5.chunk.js": "/gusto-web/static/js/3.8324dcb5.chunk.js",
     "static/js/3.8324dcb5.chunk.js.map": "/gusto-web/static/js/3.8324dcb5.chunk.js.map",
     "index.html": "/gusto-web/index.html",
-    "static/css/main.5077186d.chunk.css.map": "/gusto-web/static/css/main.5077186d.chunk.css.map",
-    "static/js/2.fb1a1d57.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.fb1a1d57.chunk.js.LICENSE.txt"
+    "static/css/main.4376adac.chunk.css.map": "/gusto-web/static/css/main.4376adac.chunk.css.map",
+    "static/js/2.fb1a1d57.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.fb1a1d57.chunk.js.LICENSE.txt",
+    "static/media/cylinder.26811a46.glb": "/gusto-web/static/media/cylinder.26811a46.glb"
   },
   "entrypoints": [
     "static/js/runtime-main.c3f5f08d.js",
     "static/js/2.fb1a1d57.chunk.js",
-    "static/css/main.5077186d.chunk.css",
-    "static/js/main.b5909f8d.chunk.js"
+    "static/css/main.4376adac.chunk.css",
+    "static/js/main.1b78a9ea.chunk.js"
   ]
 }
