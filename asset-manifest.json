@@ -1,23 +1,30 @@
 {
   "files": {
-    "main.css": "/gusto-web/static/css/main.4376adac.chunk.css",
-    "main.js": "/gusto-web/static/js/main.1b78a9ea.chunk.js",
-    "main.js.map": "/gusto-web/static/js/main.1b78a9ea.chunk.js.map",
-    "runtime-main.js": "/gusto-web/static/js/runtime-main.c3f5f08d.js",
-    "runtime-main.js.map": "/gusto-web/static/js/runtime-main.c3f5f08d.js.map",
-    "static/js/2.fb1a1d57.chunk.js": "/gusto-web/static/js/2.fb1a1d57.chunk.js",
-    "static/js/2.fb1a1d57.chunk.js.map": "/gusto-web/static/js/2.fb1a1d57.chunk.js.map",
-    "static/js/3.8324dcb5.chunk.js": "/gusto-web/static/js/3.8324dcb5.chunk.js",
-    "static/js/3.8324dcb5.chunk.js.map": "/gusto-web/static/js/3.8324dcb5.chunk.js.map",
+    "main.css": "/gusto-web/static/css/main.112af9d7.chunk.css",
+    "main.js": "/gusto-web/static/js/main.b8ba12cd.chunk.js",
+    "main.js.map": "/gusto-web/static/js/main.b8ba12cd.chunk.js.map",
+    "runtime-main.js": "/gusto-web/static/js/runtime-main.69fd2247.js",
+    "runtime-main.js.map": "/gusto-web/static/js/runtime-main.69fd2247.js.map",
+    "static/js/2.d7e61ba7.chunk.js": "/gusto-web/static/js/2.d7e61ba7.chunk.js",
+    "static/js/2.d7e61ba7.chunk.js.map": "/gusto-web/static/js/2.d7e61ba7.chunk.js.map",
+    "static/js/3.4873bc15.chunk.js": "/gusto-web/static/js/3.4873bc15.chunk.js",
+    "static/js/3.4873bc15.chunk.js.map": "/gusto-web/static/js/3.4873bc15.chunk.js.map",
     "index.html": "/gusto-web/index.html",
-    "static/css/main.4376adac.chunk.css.map": "/gusto-web/static/css/main.4376adac.chunk.css.map",
-    "static/js/2.fb1a1d57.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.fb1a1d57.chunk.js.LICENSE.txt",
-    "static/media/cylinder.26811a46.glb": "/gusto-web/static/media/cylinder.26811a46.glb"
+    "static/css/main.112af9d7.chunk.css.map": "/gusto-web/static/css/main.112af9d7.chunk.css.map",
+    "static/js/2.d7e61ba7.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.d7e61ba7.chunk.js.LICENSE.txt",
+    "static/media/bumber1.04fe259e.glb": "/gusto-web/static/media/bumber1.04fe259e.glb",
+    "static/media/bump1.8db915d5.png": "/gusto-web/static/media/bump1.8db915d5.png",
+    "static/media/bump2.b3ed6699.png": "/gusto-web/static/media/bump2.b3ed6699.png",
+    "static/media/bump2glb.bcb09e3a.glb": "/gusto-web/static/media/bump2glb.bcb09e3a.glb",
+    "static/media/bump3.565c28f6.png": "/gusto-web/static/media/bump3.565c28f6.png",
+    "static/media/bump3glb.8585e138.glb": "/gusto-web/static/media/bump3glb.8585e138.glb",
+    "static/media/default.399676a0.glb": "/gusto-web/static/media/default.399676a0.glb",
+    "static/media/vw.aab9bff4.glb": "/gusto-web/static/media/vw.aab9bff4.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3f5f08d.js",
-    "static/js/2.fb1a1d57.chunk.js",
-    "static/css/main.4376adac.chunk.css",
-    "static/js/main.1b78a9ea.chunk.js"
+    "static/js/runtime-main.69fd2247.js",
+    "static/js/2.d7e61ba7.chunk.js",
+    "static/css/main.112af9d7.chunk.css",
+    "static/js/main.b8ba12cd.chunk.js"
   ]
 }
