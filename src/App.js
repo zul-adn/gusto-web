@@ -1,61 +1,111 @@
-import React, { Suspense } from "react";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import React, { Suspense, useState, useRef } from "react";
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { OrbitControls, Environment } from "@react-three/drei";
 import { Physics, usePlane, useBox } from "@react-three/cannon";
 
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
-import Cyn from './3d/cylinder.glb';
+import Car from './3d/vw.glb';
+import Bumpers from './3d/bumber1.glb';
+import Bump2 from './3d/bump2glb.glb';
+import Bump3 from './3d/bump3glb.glb';
 
-import "./css/styles.css";
-import "./css/styles2.css";
+import Img1 from './img/bump1.png';
+import Img2 from './img/bump2.png';
+import Img3 from './img/bump3.png';
+
+import "./App.css";
+
+const bumper = [
+  {
+    id: 1,
+    scale: 1,
+    position: [0, 0.18, 2],
+    rotation: [0, 0, 0],
+    name: "Bumper 1",
+    link: Bumpers,
+    img: Img1
+  },
+  {
+    id: 2,
+    scale: 0.14,
+    position: [0, 0.18, 2.1],
+    rotation: [0, 22, 0],
+    name: "Bumper 2",
+    link: Bump2,
+    img: Img2
+  },
+  {
+    id: 3,
+    scale: 0.3,
+    position: [0, 0.4, 2],
+    rotation: [0, 22, 0],
+    name: "Bumper 2",
+    link: Bump3,
+    img: Img3
+  }
+]
+
+
 
 export default function App() {
+
+  const [bumpChoose, setBumpChoose] = useState({
+    id: 1,
+    scale: 1,
+    position: [0, 0.18, 2],
+    rotation: [0, 0, 0],
+    name: "Bumper 1",
+    link: Bumpers,
+    img: Img1
+  })
+
+  React.useEffect(() => {
+    console.log(bumpChoose.link)
+  }, [bumpChoose])
+
+  const Model = () => {
+    const gltf = useLoader(GLTFLoader, Car);
+    return (
+      <>
+        <primitive object={gltf.scene} scale={1} />
+      </>
+    );
+  };
+
+  const Bumper = () => {
+    const gltf = useLoader(GLTFLoader, bumpChoose.link);
+    return (
+      <>
+        {bumpChoose.length !== 0 ?
+          <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
+          :
+          <></>
+        }
+      </>
+    );
+  };
+
   return (
-    <>
-      <div className="navbar-wrapper">
-        <nav className="navbar">
-          <div>
-            <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder-1.png" className="logo" />
-          </div>
-          <div>
-            <ul className="list">
-              <li><a>Home</a></li>
-              <li><a>Project</a></li>
-              <li><a>Portofolio</a></li>
-              <li><a>Abous Us</a></li>
-            </ul>
-          </div>
-        </nav>
+    <div className="container">
+      <div className="main">
+        <Canvas>
+          <Suspense fallback={null}>
+            <Model />
+            <Bumper />
+            <OrbitControls />
+            <Environment preset="sunset" background />
+          </Suspense>
+        </Canvas>
       </div>
-
-      <model-viewer
-        style={{ height: '100vh', width: '100vw' }}
-        // src="https://dinartech.com/ar/cylinder.glb"
-        src={Cyn}
-        alt="A 3D model of an astronaut"
-        ar
-        ar-modes="webxr scene-viewer quick-look"
-        // environment-image="neutral"
-        max-field-of-view="-160deg"
-        min-field-of-view="5.5deg"
-        max-camera-orbit="Infinity 89deg auto"
-        min-camera-orbit="-Infinity 85deg auto"
-        orbit-sensitivity="0.4"
-        disable-zoom
-        camera-controls>
-      </model-viewer>
-
-      <div class="footer-wrapper">
-        <div class="footer">
-          <div class="page">
-            <span id="page-number"></span>
+      <div className="sidebar">
+        {bumper.map((v, i) =>
+          <div key={i} className="choose" onClick={() => setBumpChoose(v)}>
+            <img src={v.img} />
           </div>
-          <div class="footer-desc">
-
-          </div>
-        </div>
+        )}
       </div>
-    </>
+    </div>
   );
 }
