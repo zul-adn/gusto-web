@@ -30,7 +30,7 @@ const bumper = [
   },
   {
     id: 2,
-    scale: 0.14,
+    scale: 0.15,
     position: [0, 0.18, 2.1],
     rotation: [0, 22, 0],
     name: "Bumper 2",
@@ -68,42 +68,40 @@ export default function App() {
 
   const Bumper = () => {
     const gltf = useLoader(GLTFLoader, Bumpers);
+    const gltf2 = useLoader(GLTFLoader, Bump2);
+    const gltf3 = useLoader(GLTFLoader, Bump3);
+
     return (
       <>
-        {bumpChoose.length !== 0 ?
-          <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
-          :
+      {bumpChoose.length !== 0 ?
+        bumpChoose.id === 1 ? 
+          <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />  
+          :bumpChoose.id === 2 ? 
+          <primitive object={gltf2.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
+          :bumpChoose.id === 3 ? 
+          <primitive object={gltf3.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} /> : 
           <></>
-        }
+        :
+        <></>
+      }
+      
       </>
     );
   };
 
-  const Bumper1 = () => {
-    const gltf = useLoader(GLTFLoader, Bump2);
-    return (
-      <>
-        {bumpChoose.length !== 0 ?
-          <primitive object={gltf.scene} scale={bumper[1].scale} position={bumper[1].position} rotation={bumper[1].rotation} />
-          :
-          <></>
-        }
-      </>
-    );
-  };
+  // const Bumper1 = () => {
+  //   const gltf = useLoader(GLTFLoader, Bump2);
+  //   return (
+  //     <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
+  //   );
+  // };
 
-  const Bumper2 = () => {
-    const gltf = useLoader(GLTFLoader, Bump3);
-    return (
-      <>
-        {bumpChoose.length !== 0 ?
-          <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
-          :
-          <></>
-        }
-      </>
-    );
-  };
+  // const Bumper2 = () => {
+  //   const gltf = useLoader(GLTFLoader, Bump3);
+  //   return (
+  //     <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
+  //   );
+  // };
 
   return (
     <div className="container">
@@ -112,11 +110,7 @@ export default function App() {
           <Suspense fallback={null}>
             <Model />
             <Bumper />
-            {bumpChoose.length !== 0 ?
-              bumpChoose.id === 1 ? <Bumper /> :  bumpChoose.id === 2 ? <Bumper1 /> :  bumpChoose.id === 3 ? <Bumper2 /> : <></>
-            :
-            <></>
-            }
+            
             <OrbitControls />
             <Environment preset="sunset" background />
           </Suspense>
