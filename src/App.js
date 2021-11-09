@@ -3,6 +3,7 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls, Environment } from "@react-three/drei";
 import { Physics, usePlane, useBox } from "@react-three/cannon";
+import { useGLTF } from '@react-three/drei';
 
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
@@ -48,21 +49,12 @@ const bumper = [
 ]
 
 
-
 export default function App() {
 
-  const [bumpChoose, setBumpChoose] = useState({
-    id: 1,
-    scale: 1,
-    position: [0, 0.18, 2],
-    rotation: [0, 0, 0],
-    name: "Bumper 1",
-    link: Bumpers,
-    img: Img1
-  })
+  const [bumpChoose, setBumpChoose] = useState([])
 
   React.useEffect(() => {
-    console.log(bumpChoose.link)
+    console.log(bumpChoose.id)
   }, [bumpChoose])
 
   const Model = () => {
@@ -75,7 +67,33 @@ export default function App() {
   };
 
   const Bumper = () => {
-    const gltf = useLoader(GLTFLoader, bumpChoose.link);
+    const gltf = useLoader(GLTFLoader, Bumpers);
+    return (
+      <>
+        {bumpChoose.length !== 0 ?
+          <primitive object={gltf.scene} scale={bumpChoose.scale} position={bumpChoose.position} rotation={bumpChoose.rotation} />
+          :
+          <></>
+        }
+      </>
+    );
+  };
+
+  const Bumper1 = () => {
+    const gltf = useLoader(GLTFLoader, Bump2);
+    return (
+      <>
+        {bumpChoose.length !== 0 ?
+          <primitive object={gltf.scene} scale={bumper[1].scale} position={bumper[1].position} rotation={bumper[1].rotation} />
+          :
+          <></>
+        }
+      </>
+    );
+  };
+
+  const Bumper2 = () => {
+    const gltf = useLoader(GLTFLoader, Bump3);
     return (
       <>
         {bumpChoose.length !== 0 ?
@@ -94,6 +112,11 @@ export default function App() {
           <Suspense fallback={null}>
             <Model />
             <Bumper />
+            {bumpChoose.length !== 0 ?
+              bumpChoose.id === 1 ? <Bumper /> :  bumpChoose.id === 2 ? <Bumper1 /> :  bumpChoose.id === 3 ? <Bumper2 /> : <></>
+            :
+            <></>
+            }
             <OrbitControls />
             <Environment preset="sunset" background />
           </Suspense>
