@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/gusto-web/static/css/main.112af9d7.chunk.css",
-    "main.js": "/gusto-web/static/js/main.c7988228.chunk.js",
-    "main.js.map": "/gusto-web/static/js/main.c7988228.chunk.js.map",
+    "main.js": "/gusto-web/static/js/main.9b07b0fd.chunk.js",
+    "main.js.map": "/gusto-web/static/js/main.9b07b0fd.chunk.js.map",
     "runtime-main.js": "/gusto-web/static/js/runtime-main.69fd2247.js",
     "runtime-main.js.map": "/gusto-web/static/js/runtime-main.69fd2247.js.map",
-    "static/js/2.72514eca.chunk.js": "/gusto-web/static/js/2.72514eca.chunk.js",
-    "static/js/2.72514eca.chunk.js.map": "/gusto-web/static/js/2.72514eca.chunk.js.map",
+    "static/js/2.2ceb81dc.chunk.js": "/gusto-web/static/js/2.2ceb81dc.chunk.js",
+    "static/js/2.2ceb81dc.chunk.js.map": "/gusto-web/static/js/2.2ceb81dc.chunk.js.map",
     "static/js/3.4873bc15.chunk.js": "/gusto-web/static/js/3.4873bc15.chunk.js",
     "static/js/3.4873bc15.chunk.js.map": "/gusto-web/static/js/3.4873bc15.chunk.js.map",
     "index.html": "/gusto-web/index.html",
     "static/css/main.112af9d7.chunk.css.map": "/gusto-web/static/css/main.112af9d7.chunk.css.map",
-    "static/js/2.72514eca.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.72514eca.chunk.js.LICENSE.txt",
+    "static/js/2.2ceb81dc.chunk.js.LICENSE.txt": "/gusto-web/static/js/2.2ceb81dc.chunk.js.LICENSE.txt",
     "static/media/bumber1.04fe259e.glb": "/gusto-web/static/media/bumber1.04fe259e.glb",
     "static/media/bump1.8db915d5.png": "/gusto-web/static/media/bump1.8db915d5.png",
     "static/media/bump2.b3ed6699.png": "/gusto-web/static/media/bump2.b3ed6699.png",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.69fd2247.js",
-    "static/js/2.72514eca.chunk.js",
+    "static/js/2.2ceb81dc.chunk.js",
     "static/css/main.112af9d7.chunk.css",
-    "static/js/main.c7988228.chunk.js"
+    "static/js/main.9b07b0fd.chunk.js"
   ]
 }
